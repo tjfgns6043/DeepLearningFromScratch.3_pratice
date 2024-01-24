@@ -7,7 +7,7 @@ class Function:
     output = Variable(y) # Variable 형태로 되돌린다.
     return output
   def forward(self, x):
-    raise NotImplemetedError()
+    raise NotImplementedError()
 
 
 class Square(Function):
