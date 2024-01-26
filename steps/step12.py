@@ -26,14 +26,12 @@ class Variable:
             gxs = f.backward(*gys) # 2 
             if not isinstance(gxs, tuple): # 3
               gxs = (gxs,)
-              print(gxs)
               
             for x, gx in zip(f.inputs, gxs): # 4
               x.grad = gx
 
               if x.creator is not None:
                 funcs.append(x.creator)
-                print(funcs)
 
 
 def as_array(x):
