@@ -23,6 +23,10 @@ class Variable:
         self.creator = func
         self.generation = func.generation + 1 # 세대를 기록한다(부모 세대 + 1)
     
+    @property
+    def shape(self):
+        return self.data.shape
+    
     @property # 데코레이터
     def ndim(self):
        return self.data.ndim
